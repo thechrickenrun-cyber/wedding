@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     images: [
       {
        
-        url: "https://wedding-sandy-eight.vercel.app/images/fi02.jpg",
+        url: "https://wedding-sandy-eight.vercel.app/images/fi01.jpg",
         width: 1600,
         height: 1067
       }
