@@ -6,7 +6,7 @@ export const runtime = "nodejs";
 
 function sheetRange(sheetName: string) {
   const escapedSheetName = sheetName.replace(/'/g, "''");
-  return `'${escapedSheetName}'!A:H`;
+  return `'${escapedSheetName}'!A:G`;
 }
 
 function googleErrorStatus(error: unknown) {
@@ -89,7 +89,6 @@ export async function POST(request: Request) {
             rsvp.name,
             rsvp.attendance === "yes" ? "ยินดีไปร่วมงาน" : rsvp.attendance === "no" ? "ส่งความรักจากระยะไกล" : rsvp.attendance,
             rsvp.guestCount,
-            rsvp.mealNote,
             rsvp.phone ? `'${rsvp.phone}` : "",
             rsvp.message,
             rsvp.locale

@@ -4,7 +4,6 @@ export type RSVPInput = {
   name?: unknown;
   attendance?: unknown;
   guestCount?: unknown;
-  mealNote?: unknown;
   phone?: unknown;
   message?: unknown;
   locale?: unknown;
@@ -14,7 +13,6 @@ export type ValidRSVP = {
   name: string;
   attendance: "yes" | "no";
   guestCount: number;
-  mealNote: string;
   phone: string;
   message: string;
   locale: Locale;
@@ -27,7 +25,6 @@ export function validateRSVP(input: RSVPInput): { data?: ValidRSVP; error?: stri
   const name = clean(input.name, 120);
   const attendance = input.attendance === "yes" || input.attendance === "no" ? input.attendance : "";
   const phone = clean(input.phone, 60);
-  const mealNote = clean(input.mealNote, 240);
   const message = clean(input.message, 600);
   const guestCountNumber = Number(input.guestCount);
   const locale = input.locale === "en" ? "en" : "th";
@@ -57,7 +54,6 @@ export function validateRSVP(input: RSVPInput): { data?: ValidRSVP; error?: stri
       name,
       attendance,
       guestCount: attendance === "no" ? 0 : guestCountNumber,
-      mealNote,
       phone,
       message,
       locale

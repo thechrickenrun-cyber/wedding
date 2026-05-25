@@ -43,7 +43,6 @@ const initialForm: RSVPForm = {
   name: "",
   attendance: "",
   guestCount: "1",
-  mealNote: "",
   phone: "",
   message: ""
 };
@@ -578,14 +577,6 @@ export function WeddingInvitation({
               />
             </label>
           </div>
-          <label className="field-control">
-            <span className={textClass(t.rsvp.mealNote, "field-label")}>{t.rsvp.mealNote}</span>
-            <input
-              value={form.mealNote}
-              onChange={(event) => setForm({ ...form, mealNote: event.target.value })}
-              placeholder={t.rsvp.mealPlaceholder}
-            />
-          </label>
           <label className="field-control">
             <span className={textClass(t.rsvp.message, "field-label")}>{t.rsvp.message}</span>
             <textarea

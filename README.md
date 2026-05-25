@@ -27,7 +27,7 @@ The private key can be pasted with escaped newlines. The API route converts `\n`
 Suggested sheet columns. The first column is stored as `dd-MM-yyyy` in the Asia/Bangkok timezone.
 
 ```text
-Date, Name, Attendance, Guest Count, Meal Note, Phone, Message, Locale
+Date, Name, Attendance, Guest Count, Phone, Message, Locale
 ```
 
 ## Build

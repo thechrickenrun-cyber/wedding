@@ -6,7 +6,6 @@ export type RSVPForm = {
   name: string;
   attendance: "yes" | "no" | "";
   guestCount: string;
-  mealNote: string;
   phone: string;
   message: string;
 };
